@@ -1,0 +1,24 @@
+{
+  "pivotal": {
+    "token": "",
+    "baseUrl": "https://www.pivotaltracker.com/services/v5"
+  },
+  "trello": {
+    "token": "",
+    "key": "",
+    "baseUrl": "https://api.trello.com/1"
+  },
+  "todoist": {
+    "token": "",
+    "baseUrl": "https://api.todoist.com/rest/v1"
+  },
+  "salesforce": {
+    "clientId": "",
+    "clientSecret": "",
+    "secretToken": "",
+    "username": "",
+    "password": "",
+    "baseUrl": "/services/data/v49.0/sobjects",
+    "authenticationUrl": "https://login.salesforce.com"
+  }
+}

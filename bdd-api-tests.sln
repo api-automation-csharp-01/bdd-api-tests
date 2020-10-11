@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIAutomationCore", "APIAutomationCore\APIAutomationCore.csproj", "{CC9AA2CB-7EAB-4FB0-AF73-E06DAB96E06E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIAutomationTests", "APIAutomationTests\APIAutomationTests.csproj", "{05FBC4EE-21E9-4344-B9B6-BD40C3775E0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC9AA2CB-7EAB-4FB0-AF73-E06DAB96E06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9AA2CB-7EAB-4FB0-AF73-E06DAB96E06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9AA2CB-7EAB-4FB0-AF73-E06DAB96E06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9AA2CB-7EAB-4FB0-AF73-E06DAB96E06E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05FBC4EE-21E9-4344-B9B6-BD40C3775E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05FBC4EE-21E9-4344-B9B6-BD40C3775E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05FBC4EE-21E9-4344-B9B6-BD40C3775E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05FBC4EE-21E9-4344-B9B6-BD40C3775E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
