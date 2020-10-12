@@ -28,5 +28,15 @@ namespace APIAutomationTests.Hooks
         {
             helper.CleanHelper();
         }
+
+        /// <summary>
+        /// Handles scenario context data.
+        /// </summary>
+        /// <param name="scenarioContext">Specflow scenario context.</param>
+        [AfterScenario(Order = 10001)]
+        public void ScenarioContextHook(ScenarioContext scenarioContext)
+        {
+            ScenarioContext context = scenarioContext;
+        }
     }
 }
