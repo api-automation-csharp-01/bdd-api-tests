@@ -72,9 +72,12 @@
         public void WhenISendPostRequest(ApisEnum service, string endpoint, string body)
         {
             string endpointMapped = Mapper.MapValue(endpoint, helper.GetData());
+            string bodyMapped = Mapper.MapValue(body, helper.GetData());
             IRequest request = RequestFactory.GetRequest(service, endpointMapped);
-            request.GetRequest().AddJsonBody(body);
+            request.GetRequest().AddJsonBody(bodyMapped);
             response = RequestManager.Post(client, request);
+            ReportUtils.AddJsonData("Request body", bodyMapped);
+            ReportUtils.AddJsonData("Response body", response.GetResponse().Content);
         }
 
         /// <summary>
@@ -87,9 +90,12 @@
         public void WhenISendPutRequest(ApisEnum service, string endpoint, string body)
         {
             string endpointMapped = Mapper.MapValue(endpoint, helper.GetData());
+            string bodyMapped = Mapper.MapValue(body, helper.GetData());
             IRequest request = RequestFactory.GetRequest(service, endpointMapped);
-            request.GetRequest().AddJsonBody(body);
+            request.GetRequest().AddJsonBody(bodyMapped);
             response = RequestManager.Put(client, request);
+            ReportUtils.AddJsonData("Request body", bodyMapped);
+            ReportUtils.AddJsonData("Response body", response.GetResponse().Content);
         }
 
         /// <summary>
@@ -102,9 +108,12 @@
         public void WhenISendPatchRequest(ApisEnum service, string endpoint, string body)
         {
             string endpointMapped = Mapper.MapValue(endpoint, helper.GetData());
+            string bodyMapped = Mapper.MapValue(body, helper.GetData());
             IRequest request = RequestFactory.GetRequest(service, endpointMapped);
-            request.GetRequest().AddJsonBody(body);
+            request.GetRequest().AddJsonBody(bodyMapped);
             response = RequestManager.Patch(client, request);
+            ReportUtils.AddJsonData("Request body", bodyMapped);
+            ReportUtils.AddJsonData("Response body", response.GetResponse().Content);
         }
 
         /// <summary>

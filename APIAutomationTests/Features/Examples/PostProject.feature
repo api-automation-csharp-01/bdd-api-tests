@@ -1,6 +1,7 @@
-﻿Feature: Create Project
+﻿@regression
+Feature: Create Project
 
-@smoke @functional @deletePivotalProject
+@functional @deletePivotalProject
 Scenario: Project is created with name
 	Given I use the "Pivotal" service client
 	When I send a "Pivotal" POST request to "projects" with the following json body
