@@ -1,0 +1,91 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "id": "5f86352c3ae4302d959c19cd",
+      "name": "List Postman",
+      "closed": false,
+      "pos": 8192,
+      "idBoard": "5f8634338f459b3042324f7a",
+      "limits": {}
+    }
+  ],
+  "required": [
+    "id",
+    "name",
+    "closed",
+    "pos",
+    "idBoard",
+    "limits"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "The id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5f86352c3ae4302d959c19cd"
+      ]
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The name schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "List Postman"
+      ]
+    },
+    "closed": {
+      "$id": "#/properties/closed",
+      "type": "boolean",
+      "title": "The closed schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "pos": {
+      "$id": "#/properties/pos",
+      "type": "integer",
+      "title": "The pos schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        8192
+      ]
+    },
+    "idBoard": {
+      "$id": "#/properties/idBoard",
+      "type": "string",
+      "title": "The idBoard schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5f8634338f459b3042324f7a"
+      ]
+    },
+    "limits": {
+      "$id": "#/properties/limits",
+      "type": "object",
+      "title": "The limits schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {}
+      ],
+      "required": [],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
