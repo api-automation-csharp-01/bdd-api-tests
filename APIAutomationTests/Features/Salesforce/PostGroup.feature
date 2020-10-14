@@ -1,6 +1,6 @@
 ﻿Feature: Create Group
 
-@smoke @functional @deleteSalesforceGroup
+@functional @deleteSalesforceGroup
 Scenario: Group is created with name
 	Given I use the "Salesforce" service client
 	When I send a "Salesforce" POST request to "group" with the following json body
@@ -17,7 +17,7 @@ Scenario: Group is created with name
 		| success  | True          |
 		| errors   | []            |
 
-@smoke @functional @deleteSalesforceGroup
+@functional @deleteSalesforceGroup
 Scenario: Group is created with queue type
 	Given I use the "Salesforce" service client
 	When I send a "Salesforce" POST request to "group" with the following json body
@@ -35,10 +35,8 @@ Scenario: Group is created with queue type
 		| success  | True          |
 		| errors   | []            |
 
-
-
 @negative
-Scenario: Group is not created with spaces on display name 
+Scenario: Group is not created with spaces on developer name 
 	Given I use the "Salesforce" service client
 	When I send a "Salesforce" POST request to "group" with the following json body
 		"""
@@ -59,11 +57,11 @@ Scenario: Group is not created with empty name
 	When I send a "Salesforce" POST request to "group" with the following json body
 		"""
 		{
-			"name": ""
+			"Name": ""
 		}
 		"""
 	Then I validate that the response status code is "400"
 	And I validate that the response body contains the following values
-		| jsonpath  | expectedValue                       |
+		| jsonpath      | expectedValue                       |
 		| [0].message   | Required fields are missing: [Name] |
 		| [0].errorCode | REQUIRED_FIELD_MISSING              |
