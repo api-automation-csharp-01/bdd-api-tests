@@ -165,7 +165,8 @@
         public void ThenIValidateThatTheResponseBodyContainsTheFollowingValues(Table table)
         {
             var dictionary = TableUtils.ConvertToDictionary(table);
-            AssertUtils.AssertExpectedValues(response, dictionary);
+            var fieldsMapped = Mapper.MapValues(dictionary, helper.GetData());
+            AssertUtils.AssertExpectedValues(response, fieldsMapped);
         }
     }
 }

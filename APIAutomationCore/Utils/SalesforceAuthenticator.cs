@@ -30,7 +30,7 @@ namespace APIAutomationCore.Utils
                 EnvironmentConfig.GetInstance().GetConfig(ApisEnum.Salesforce).Username);
             request.AddQueryParameter(
                 "password",
-                EnvironmentConfig.GetInstance().GetConfig(ApisEnum.Salesforce).Password);
+                EnvironmentConfig.GetInstance().GetConfig(ApisEnum.Salesforce).Password + EnvironmentConfig.GetInstance().GetConfig(ApisEnum.Salesforce).SecretToken);
             Response response = new Response(client.Execute(request));
             token = response.GetValue("access_token");
             instanceUrl = response.GetValue("instance_url");
