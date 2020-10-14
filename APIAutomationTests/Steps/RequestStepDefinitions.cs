@@ -1,4 +1,7 @@
-﻿namespace APIAutomationTests.Steps
+﻿[assembly: NUnit.Framework.Parallelizable(NUnit.Framework.ParallelScope.Fixtures)]
+[assembly: NUnit.Framework.LevelOfParallelism(2)]
+
+namespace APIAutomationTests.Steps
 {
     using APIAutomationCore.Client;
     using APIAutomationCore.Utils;
@@ -30,7 +33,7 @@
         /// Sets client to be used.
         /// </summary>
         /// <param name="service">API service.</param>
-        [Given(@"I use the ""(.*)"" service client")]
+        [Given(@"I use the ""(.*)"" (?:service|api) client")]
         public void GivenIUseTheServiceClient(ApisEnum service)
         {
             client = ClientFactory.GetClient(service);
@@ -72,9 +75,12 @@
         public void WhenISendPostRequest(ApisEnum service, string endpoint, string body)
         {
             string endpointMapped = Mapper.MapValue(endpoint, helper.GetData());
+            string bodyMapped = Mapper.MapValue(body, helper.GetData());
             IRequest request = RequestFactory.GetRequest(service, endpointMapped);
-            request.GetRequest().AddJsonBody(body);
+            request.GetRequest().AddJsonBody(bodyMapped);
             response = RequestManager.Post(client, request);
+            ReportUtils.AddJsonData("Request body", bodyMapped);
+            ReportUtils.AddJsonData("Response body", response.GetResponse().Content);
         }
 
         /// <summary>
@@ -87,9 +93,12 @@
         public void WhenISendPutRequest(ApisEnum service, string endpoint, string body)
         {
             string endpointMapped = Mapper.MapValue(endpoint, helper.GetData());
+            string bodyMapped = Mapper.MapValue(body, helper.GetData());
             IRequest request = RequestFactory.GetRequest(service, endpointMapped);
-            request.GetRequest().AddJsonBody(body);
+            request.GetRequest().AddJsonBody(bodyMapped);
             response = RequestManager.Put(client, request);
+            ReportUtils.AddJsonData("Request body", bodyMapped);
+            ReportUtils.AddJsonData("Response body", response.GetResponse().Content);
         }
 
         /// <summary>
@@ -102,9 +111,12 @@
         public void WhenISendPatchRequest(ApisEnum service, string endpoint, string body)
         {
             string endpointMapped = Mapper.MapValue(endpoint, helper.GetData());
+            string bodyMapped = Mapper.MapValue(body, helper.GetData());
             IRequest request = RequestFactory.GetRequest(service, endpointMapped);
-            request.GetRequest().AddJsonBody(body);
+            request.GetRequest().AddJsonBody(bodyMapped);
             response = RequestManager.Patch(client, request);
+            ReportUtils.AddJsonData("Request body", bodyMapped);
+            ReportUtils.AddJsonData("Response body", response.GetResponse().Content);
         }
 
         /// <summary>

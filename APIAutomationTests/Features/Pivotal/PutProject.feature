@@ -1,4 +1,5 @@
-﻿Feature: Update Project
+﻿@regression
+Feature: Update Project
 
 Background: Create project
 	Given I use the "Pivotal" service client
