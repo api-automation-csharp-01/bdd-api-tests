@@ -126,6 +126,15 @@
         }
 
         /// <summary>
+        /// Stored project ID for deleting.
+        /// </summary>
+        [StepDefinition(@"I store request id for cleaning environment")]
+        public void StoreIdToCleaningEnvironment()
+        {
+            helper.StoreId(response.GetValue("id"));
+        }
+
+        /// <summary>
         /// Stores data from response.
         /// </summary>
         /// <param name="jsonpath">Jsonpath expression.</param>
