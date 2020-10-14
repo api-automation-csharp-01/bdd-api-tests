@@ -3,7 +3,7 @@ Feature: Create Project
 
 @functional @deletePivotalProject
 Scenario: Project is created with name
-	Given I use the "Pivotal" service client
+	Given I use the "Pivotal" api client
 	When I send a "Pivotal" POST request to "projects" with the following json body
 		"""
 		{
