@@ -42,3 +42,51 @@ Scenario: Account is updated with name
 		| NumberOfEmployees | 2                                 |
 
 		
+@smoke @deleteSalesforceAccount
+Scenario: Update Account Name
+	Given I use the "Salesforce" service client
+	When I send a "Salesforce" PATCH request to "Account/{ACCOUNT_ID}" with the following json body
+		"""
+		{
+			"name": "EDITED Test automation SalesForce"
+		}
+		"""
+	Then I validate that the response status code is "204"
+
+@negative @deleteSalesforceAccount
+Scenario Outline: Not Possible to edit with invalid Account ID
+	Given I use the "Salesforce" service client
+	When I send a "Salesforce" PATCH request to "Account/<Invalid ID>" with the following json body
+		"""
+		{
+			"name": "EDITED Test automation SalesForce"
+		}
+		"""
+	Then I validate that the response status code is "404"
+	And I validate that the response body contains the following values
+		| jsonpath      | expectedValue                                                                |
+		| [0].errorCode | NOT_FOUND                                                                    |
+		| [0].message   | Provided external ID field does not exist or is not accessible: <Invalid ID> |
+
+		Examples: 
+        | Invalid ID |
+        | RandomText |
+        | null       |
+        | 999987     |
+        | false      |
+
+
+@negative @deleteSalesforceAccount
+Scenario: Not Possible to edit with an Empty Account Name
+	Given I use the "Salesforce" service client
+	When I send a "Salesforce" PATCH request to "Account/{ACCOUNT_ID}" with the following json body
+		"""
+		{
+			"name": ""
+		}
+		"""
+	Then I validate that the response status code is "400"	
+	And I validate that the response body contains the following values
+		| jsonpath      | expectedValue                       |
+		| [0].message   | Required fields are missing: [Name] |
+		| [0].errorCode | REQUIRED_FIELD_MISSING              |
