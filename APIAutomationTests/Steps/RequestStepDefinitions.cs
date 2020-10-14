@@ -119,7 +119,7 @@
         /// <summary>
         /// Stored project ID for deleting.
         /// </summary>
-        [When(@"I store project id for workspace cleaning")]
+        [When(@"I store (?:project|response) id for workspace cleaning")]
         public void WhenIStoreProjectIdForWorkspaceCleaning()
         {
             helper.StoreId(response.GetValue("id"));
