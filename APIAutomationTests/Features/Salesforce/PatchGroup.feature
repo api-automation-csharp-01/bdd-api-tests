@@ -65,3 +65,18 @@ Scenario: Group is not updated with spaces on developer name
 		| jsonpath      | expectedValue                                                                                                                                                                                                                     |
 		| [0].message   | Developer Name: The Group API Name can only contain underscores and alphanumeric characters. It must be unique, begin with a letter, not include spaces, not end with an underscore, and not contain two consecutive underscores. |
 		| [0].errorCode | FIELD_INTEGRITY_EXCEPTION                                                                                                                                                                                                         |
+
+@negative
+Scenario: Group is not updated with non existing id
+	Given I use the "Salesforce" service client
+	When I send a "Salesforce" PATCH request to "group/00G4W000003e0P5UAI" with the following json body
+		"""
+		{
+			"Name": "TEST UPDATED"
+		}
+		"""
+	Then I validate that the response status code is "400"
+	And I validate that the response body contains the following values
+		| jsonpath      | expectedValue     |
+		| [0].message   | invalid record id |
+		| [0].errorCode | INVALID_ID_FIELD  |
