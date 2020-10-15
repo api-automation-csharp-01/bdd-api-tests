@@ -129,6 +129,15 @@ namespace APIAutomationTests.Steps
         }
 
         /// <summary>
+        /// Stored project ID for deleting.
+        /// </summary>
+        [StepDefinition(@"I store response id for cleaning environment")]
+        public void StoreIdToCleaningEnvironment()
+        {
+            helper.StoreId(response.GetValue("id"));
+        }
+
+        /// <summary>
         /// Stores data from response.
         /// </summary>
         /// <param name="jsonpath">Jsonpath expression.</param>
@@ -168,7 +177,8 @@ namespace APIAutomationTests.Steps
         public void ThenIValidateThatTheResponseBodyContainsTheFollowingValues(Table table)
         {
             var dictionary = TableUtils.ConvertToDictionary(table);
-            AssertUtils.AssertExpectedValues(response, dictionary);
+            var fieldsMapped = Mapper.MapValues(dictionary, helper.GetData());
+            AssertUtils.AssertExpectedValues(response, fieldsMapped);
         }
     }
 }
