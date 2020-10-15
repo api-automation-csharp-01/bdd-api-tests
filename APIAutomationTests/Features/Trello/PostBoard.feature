@@ -1,13 +1,12 @@
 ﻿Feature: Create Board
 
 @functional @deleteTrelloBoard @regression
-Scenario: Board is created only with name and org Id
+Scenario: Board is created only with name
 	Given I use the "Trello" service client
 	When I send a "Trello" POST request to "boards" with the following json body
 		"""
 		{ 
-			"name": "Test automation CSharp",
-			"idOrganization": "5f5801b5776a7a5da2f3561a"		
+			"name": "Test automation CSharp"		
 		}
 		"""
 	And I store response id for workspace cleaning
@@ -16,7 +15,6 @@ Scenario: Board is created only with name and org Id
 	And I validate that the response body contains the following values
 		| jsonpath              | expectedValue            |
 		| name                  | Test automation CSharp   |
-		| idOrganization        | 5f5801b5776a7a5da2f3561a |
 		| prefs.permissionLevel | private                  |
 		| prefs.comments        | members                  |
 		| prefs.invitations     | members                  |
@@ -31,10 +29,7 @@ Scenario: Board is created with name and other fields
 		{ 
 			"name": "Test automation CSharp",
 			"desc": "This board has been created using SpecFlow",
-			"idOrganization": "5f5801b5776a7a5da2f3561a",
 			"prefs_permissionLevel": "public",
-			"prefs_comments": "org",
-			"prefs_invitations": "admins",
 			"prefs_background": "green"			
 		}
 		"""
@@ -45,8 +40,7 @@ Scenario: Board is created with name and other fields
 		| jsonpath              | expectedValue                              |
 		| name                  | Test automation CSharp                     |
 		| desc                  | This board has been created using SpecFlow |
-		| idOrganization        | 5f5801b5776a7a5da2f3561a                   |
 		| prefs.permissionLevel | public                                     |
-		| prefs.comments        | org                                        |
-		| prefs.invitations     | admins                                     |
+		| prefs.comments        | members                                    |
+		| prefs.invitations     | members                                    |
 		| prefs.background      | green                                      |

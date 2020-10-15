@@ -2,7 +2,6 @@
   "$schema": "http://json-schema.org/draft-07/schema",
   "$id": "http://example.com/example.json",
   "type": "object",
-  "title": "The root schema",
   "required": [
     "id",
     "name",
@@ -21,58 +20,47 @@
   "properties": {
     "id": {
       "$id": "#/properties/id",
-      "type": "string",
-      "title": "The id schema"
+      "type": "string"
     },
     "name": {
       "$id": "#/properties/name",
-      "type": "string",
-      "title": "The name schema"
+      "type": "string"
     },
     "desc": {
       "$id": "#/properties/desc",
-      "type": "string",
-      "title": "The desc schema"
+      "type": "string"
     },
     "descData": {
       "$id": "#/properties/descData",
-      "type": "null",
-      "title": "The descData schema"
+      "type": "null"
     },
     "closed": {
       "$id": "#/properties/closed",
-      "type": "boolean",
-      "title": "The closed schema"
+      "type": "boolean"
     },
     "idOrganization": {
       "$id": "#/properties/idOrganization",
-      "type": "string",
-      "title": "The idOrganization schema"
+      "type": "null"
     },
     "idEnterprise": {
       "$id": "#/properties/idEnterprise",
-      "type": "null",
-      "title": "The idEnterprise schema"
+      "type": "null"
     },
     "pinned": {
       "$id": "#/properties/pinned",
-      "type": "boolean",
-      "title": "The pinned schema"
+      "type": "boolean"
     },
     "url": {
       "$id": "#/properties/url",
-      "type": "string",
-      "title": "The url schema"
+      "type": "string"
     },
     "shortUrl": {
       "$id": "#/properties/shortUrl",
-      "type": "string",
-      "title": "The shortUrl schema"
+      "type": "string"
     },
     "prefs": {
       "$id": "#/properties/prefs",
       "type": "object",
-      "title": "The prefs schema",
       "required": [
         "permissionLevel",
         "hideVotes",
@@ -101,118 +89,95 @@
       "properties": {
         "permissionLevel": {
           "$id": "#/properties/prefs/properties/permissionLevel",
-          "type": "string",
-          "title": "The permissionLevel schema"
+          "type": "string"
         },
         "hideVotes": {
           "$id": "#/properties/prefs/properties/hideVotes",
-          "type": "boolean",
-          "title": "The hideVotes schema"
+          "type": "boolean"
         },
         "voting": {
           "$id": "#/properties/prefs/properties/voting",
-          "type": "string",
-          "title": "The voting schema"
+          "type": "string"
         },
         "comments": {
           "$id": "#/properties/prefs/properties/comments",
-          "type": "string",
-          "title": "The comments schema"
+          "type": "string"
         },
         "invitations": {
           "$id": "#/properties/prefs/properties/invitations",
-          "type": "string",
-          "title": "The invitations schema"
+          "type": "string"
         },
         "selfJoin": {
           "$id": "#/properties/prefs/properties/selfJoin",
-          "type": "boolean",
-          "title": "The selfJoin schema"
+          "type": "boolean"
         },
         "cardCovers": {
           "$id": "#/properties/prefs/properties/cardCovers",
-          "type": "boolean",
-          "title": "The cardCovers schema"
+          "type": "boolean"
         },
         "isTemplate": {
           "$id": "#/properties/prefs/properties/isTemplate",
-          "type": "boolean",
-          "title": "The isTemplate schema"
+          "type": "boolean"
         },
         "cardAging": {
           "$id": "#/properties/prefs/properties/cardAging",
-          "type": "string",
-          "title": "The cardAging schema"
+          "type": "string"
         },
         "calendarFeedEnabled": {
           "$id": "#/properties/prefs/properties/calendarFeedEnabled",
-          "type": "boolean",
-          "title": "The calendarFeedEnabled schema"
+          "type": "boolean"
         },
         "background": {
           "$id": "#/properties/prefs/properties/background",
-          "type": "string",
-          "title": "The background schema"
+          "type": "string"
         },
         "backgroundImage": {
           "$id": "#/properties/prefs/properties/backgroundImage",
-          "type": "null",
-          "title": "The backgroundImage schema"
+          "type": "null"
         },
         "backgroundImageScaled": {
           "$id": "#/properties/prefs/properties/backgroundImageScaled",
-          "type": "null",
-          "title": "The backgroundImageScaled schema"
+          "type": "null"
         },
         "backgroundTile": {
           "$id": "#/properties/prefs/properties/backgroundTile",
-          "type": "boolean",
-          "title": "The backgroundTile schema"
+          "type": "boolean"
         },
         "backgroundBrightness": {
           "$id": "#/properties/prefs/properties/backgroundBrightness",
-          "type": "string",
-          "title": "The backgroundBrightness schema"
+          "type": "string"
         },
         "backgroundColor": {
           "$id": "#/properties/prefs/properties/backgroundColor",
-          "type": "string",
-          "title": "The backgroundColor schema"
+          "type": "string"
         },
         "backgroundBottomColor": {
           "$id": "#/properties/prefs/properties/backgroundBottomColor",
-          "type": "string",
-          "title": "The backgroundBottomColor schema"
+          "type": "string"
         },
         "backgroundTopColor": {
           "$id": "#/properties/prefs/properties/backgroundTopColor",
-          "type": "string",
-          "title": "The backgroundTopColor schema"
+          "type": "string"
         },
         "canBePublic": {
           "$id": "#/properties/prefs/properties/canBePublic",
-          "type": "boolean",
-          "title": "The canBePublic schema"
+          "type": "boolean"
         },
         "canBeEnterprise": {
           "$id": "#/properties/prefs/properties/canBeEnterprise",
-          "type": "boolean",
-          "title": "The canBeEnterprise schema"
+          "type": "boolean"
         },
         "canBeOrg": {
           "$id": "#/properties/prefs/properties/canBeOrg",
-          "type": "boolean",
-          "title": "The canBeOrg schema"
+          "type": "boolean"
         },
         "canBePrivate": {
           "$id": "#/properties/prefs/properties/canBePrivate",
-          "type": "boolean",
-          "title": "The canBePrivate schema"
+          "type": "boolean"
         },
         "canInvite": {
           "$id": "#/properties/prefs/properties/canInvite",
-          "type": "boolean",
-          "title": "The canInvite schema"
+          "type": "boolean"
         }
       },
       "additionalProperties": true
@@ -220,7 +185,6 @@
     "labelNames": {
       "$id": "#/properties/labelNames",
       "type": "object",
-      "title": "The labelNames schema",
       "required": [
         "green",
         "yellow",
@@ -236,53 +200,43 @@
       "properties": {
         "green": {
           "$id": "#/properties/labelNames/properties/green",
-          "type": "string",
-          "title": "The green schema"
+          "type": "string"
         },
         "yellow": {
           "$id": "#/properties/labelNames/properties/yellow",
-          "type": "string",
-          "title": "The yellow schema"
+          "type": "string"
         },
         "orange": {
           "$id": "#/properties/labelNames/properties/orange",
-          "type": "string",
-          "title": "The orange schema"
+          "type": "string"
         },
         "red": {
           "$id": "#/properties/labelNames/properties/red",
-          "type": "string",
-          "title": "The red schema"
+          "type": "string"
         },
         "purple": {
           "$id": "#/properties/labelNames/properties/purple",
-          "type": "string",
-          "title": "The purple schema"
+          "type": "string"
         },
         "blue": {
           "$id": "#/properties/labelNames/properties/blue",
-          "type": "string",
-          "title": "The blue schema"
+          "type": "string"
         },
         "sky": {
           "$id": "#/properties/labelNames/properties/sky",
-          "type": "string",
-          "title": "The sky schema"
+          "type": "string"
         },
         "lime": {
           "$id": "#/properties/labelNames/properties/lime",
-          "type": "string",
-          "title": "The lime schema"
+          "type": "string"
         },
         "pink": {
           "$id": "#/properties/labelNames/properties/pink",
-          "type": "string",
-          "title": "The pink schema"
+          "type": "string"
         },
         "black": {
           "$id": "#/properties/labelNames/properties/black",
-          "type": "string",
-          "title": "The black schema"
+          "type": "string"
         }
       },
       "additionalProperties": true
@@ -290,7 +244,6 @@
     "limits": {
       "$id": "#/properties/limits",
       "type": "object",
-      "title": "The limits schema",
       "required": [],
       "additionalProperties": true
     }

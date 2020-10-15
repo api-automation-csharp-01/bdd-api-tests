@@ -51,7 +51,7 @@
     },
     "idOrganization": {
       "$id": "#/properties/idOrganization",
-      "type": "string"
+      "type": "null"
     },
     "idEnterprise": {
       "$id": "#/properties/idEnterprise",

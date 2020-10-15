@@ -8,10 +8,8 @@ Scenario: Board is update
 		{ 
 			"name": "Board updated",
 			"desc": "This board has been updated using SpecFlow",
-			"idOrganization": "5f5801b5776a7a5da2f3561a",
-			"prefs/permissionLevel": "org",
-			"prefs/invitations": "admins",
-			"prefs/background": "green"				
+			"prefs/background": "green",
+			"labelNames/yellow": "Label in yellow"
 		}
 		"""
 	Then I validate that the response status code is "200"
@@ -20,7 +18,7 @@ Scenario: Board is update
 		| jsonpath              | expectedValue                              |
 		| name                  | Board updated                              |
 		| desc                  | This board has been updated using SpecFlow |
-		| idOrganization        | 5f5801b5776a7a5da2f3561a                   |
-		| prefs.permissionLevel | org                                        |
-		| prefs.invitations     | admins                                     |
+		| prefs.permissionLevel | private                                    |
+		| prefs.invitations     | members                                    |
 		| prefs.background      | green                                      |
+		| labelNames.yellow     | Label in yellow                            |
