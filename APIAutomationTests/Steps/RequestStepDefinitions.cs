@@ -1,5 +1,5 @@
 ﻿[assembly: NUnit.Framework.Parallelizable(NUnit.Framework.ParallelScope.Fixtures)]
-[assembly: NUnit.Framework.LevelOfParallelism(2)]
+[assembly: NUnit.Framework.LevelOfParallelism(1)]
 
 namespace APIAutomationTests.Steps
 {
