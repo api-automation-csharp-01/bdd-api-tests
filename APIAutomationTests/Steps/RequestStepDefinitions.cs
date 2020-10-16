@@ -1,4 +1,7 @@
-﻿namespace APIAutomationTests.Steps
+﻿[assembly: NUnit.Framework.Parallelizable(NUnit.Framework.ParallelScope.Fixtures)]
+[assembly: NUnit.Framework.LevelOfParallelism(1)]
+
+namespace APIAutomationTests.Steps
 {
     using APIAutomationCore.Client;
     using APIAutomationCore.Utils;
@@ -30,7 +33,7 @@
         /// Sets client to be used.
         /// </summary>
         /// <param name="service">API service.</param>
-        [Given(@"I use the ""(.*)"" service client")]
+        [Given(@"I use the ""(.*)"" (?:service|api) client")]
         public void GivenIUseTheServiceClient(ApisEnum service)
         {
             client = ClientFactory.GetClient(service);
@@ -126,6 +129,15 @@
         }
 
         /// <summary>
+        /// Stored project ID for deleting.
+        /// </summary>
+        [StepDefinition(@"I store response id for cleaning environment")]
+        public void StoreIdToCleaningEnvironment()
+        {
+            helper.StoreId(response.GetValue("id"));
+        }
+
+        /// <summary>
         /// Stores data from response.
         /// </summary>
         /// <param name="jsonpath">Jsonpath expression.</param>
@@ -165,7 +177,8 @@
         public void ThenIValidateThatTheResponseBodyContainsTheFollowingValues(Table table)
         {
             var dictionary = TableUtils.ConvertToDictionary(table);
-            AssertUtils.AssertExpectedValues(response, dictionary);
+            var fieldsMapped = Mapper.MapValues(dictionary, helper.GetData());
+            AssertUtils.AssertExpectedValues(response, fieldsMapped);
         }
     }
 }

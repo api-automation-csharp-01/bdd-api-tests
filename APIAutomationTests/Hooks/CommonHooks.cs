@@ -1,6 +1,7 @@
 namespace APIAutomationTests.Hooks
 {
     using APIAutomationTests.Helpers;
+    using NUnit.Framework;
     using TechTalk.SpecFlow;
 
     /// <summary>
@@ -37,6 +38,17 @@ namespace APIAutomationTests.Hooks
         public void ScenarioContextHook(ScenarioContext scenarioContext)
         {
             ScenarioContext context = scenarioContext;
+        }
+
+        /// <summary>
+        /// Skips test scenario.
+        /// </summary>
+        /// <param name="scenarioContext">Specflow scenario context.</param>
+        [BeforeScenario(Order = 0)]
+        [Scope(Tag = "skipScenario")]
+        public void SkipScenario(ScenarioContext scenarioContext)
+        {
+            Assert.Ignore($"The '{scenarioContext.ScenarioInfo.Title}' test was skipped.");
         }
     }
 }
