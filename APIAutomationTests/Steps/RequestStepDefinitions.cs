@@ -122,7 +122,7 @@ namespace APIAutomationTests.Steps
         /// <summary>
         /// Stored project ID for deleting.
         /// </summary>
-        [When(@"I store project id for workspace cleaning")]
+        [When(@"I store (?:project|board) id for workspace cleaning")]
         public void WhenIStoreProjectIdForWorkspaceCleaning()
         {
             helper.StoreId(response.GetValue("id"));
@@ -179,6 +179,16 @@ namespace APIAutomationTests.Steps
             var dictionary = TableUtils.ConvertToDictionary(table);
             var fieldsMapped = Mapper.MapValues(dictionary, helper.GetData());
             AssertUtils.AssertExpectedValues(response, fieldsMapped);
+        }
+
+        /// <summary>
+        /// Validates response status code.
+        /// </summary>
+        /// <param name="expectedStatusCode">Expected status code.</param>
+        [When(@"I validate that the response status code is ""(.*)""")]
+        public void WhenIValidateThatTheResponseStatusCodeIs(int expectedStatusCode)
+        {
+            ThenIValidateThatTheResponseStatusCodeIs(expectedStatusCode);
         }
     }
 }
