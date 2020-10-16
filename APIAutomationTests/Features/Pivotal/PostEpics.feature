@@ -29,3 +29,21 @@ Scenario: Create epics in a project
 		| jsonpath       | expectedValue    |
 		| name           | New epic name    |
 		| kind           | epic             |
+		| project_id     | {PROJECT_ID}     |
+
+@Negative @deletePivotalProject
+Scenario: Error when creating Epics with empty name
+	Given I use the "Pivotal" service client
+	When I send a "Pivotal" POST request to "projects/{PROJECT_ID}/epics" with the following json body
+		"""
+		{
+			"name": " "
+		}
+		"""
+	Then I validate that the response status code is "400"
+	And I validate that the response body contains the following values
+		| jsonpath         | expectedValue										    |
+		| code			   | invalid_parameter									    |
+		| kind			   | error													|
+		| error			   | One or more request parameters was missing or invalid. |
+		| general_problem  | Please enter a name for the label.						|
