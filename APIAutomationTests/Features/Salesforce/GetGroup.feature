@@ -23,4 +23,4 @@ Scenario: Group is recovered
 		| jsonpath | expectedValue          |
 		| Name     | Test automation CSharp |
 		| Type     | Regular                |
-		#| Id       | {GROUP_ID}             |
+		| Id       | {GROUP_ID}             |
