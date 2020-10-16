@@ -1,7 +1,7 @@
 ﻿@regression
 Feature: Create Account
 
-@functional @deleteSalesforceAccount
+@functional @aceptance @deleteSalesforceAccount
 Scenario: Create Account
 	Given I use the "Salesforce" service client
 	When I send a "Salesforce" POST request to "Account" with the following json body

@@ -17,7 +17,7 @@ Background: Create Account
 	And I store response "id" value as "ACCOUNT_ID"
 	Then I validate that the response status code is "201"
 
-@functional @deleteSalesforceAccount
+@functional @aceptance @deleteSalesforceAccount
 Scenario: Account is updated with name
 	Given I use the "Salesforce" service client
 	When I send a "Salesforce" PATCH request to "Account/{ACCOUNT_ID}" with the following json body
