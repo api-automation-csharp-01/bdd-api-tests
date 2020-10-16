@@ -170,5 +170,26 @@ namespace APIAutomationTests.Steps
             var dictionary = TableUtils.ConvertToDictionary(table);
             AssertUtils.AssertExpectedValues(response, dictionary);
         }
+
+        /// <summary>
+        /// stored label Id for deleting.
+        /// </summary>
+        [Then(@"I store label id for workspace cleaning")]
+        public void ThenIStoreLabelIdForWorkspaceCleaning()
+        {
+            helper.StoreId(response.GetValue("id"));
+        }
+
+        /// <summary>
+        /// Stores data from response.
+        /// </summary>
+        /// <param name="jsonpath">jsonpath expression.</param>
+        /// <param name="key">Key identifier.</param>
+        [Then(@"I store response ""(.*)"" value as ""(.*)""")]
+        public void ThenIStoreResponseValueAs(string jsonpath, string key)
+        {
+            var value = response.GetValue(jsonpath);
+            helper.StoreData(key, value);
+        }
     }
 }
