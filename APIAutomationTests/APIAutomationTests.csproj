@@ -37,4 +37,10 @@
     <ProjectReference Include="..\APIAutomationCore\APIAutomationCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\Salesforce\PostCampaign.feature">
+      <CodeBehindFile>Features/Examples/PostProject.feature.cs</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+
 </Project>

@@ -126,6 +126,15 @@
         }
 
         /// <summary>
+        /// Stored campaign ID for deleting.
+        /// </summary>
+        [When(@"I store campaign id for workspace cleaning")]
+        public void WhenIStoreCampaignIdForWorkspaceCleaning()
+        {
+            helper.StoreId(response.GetValue("id"));
+        }
+
+        /// <summary>
         /// Stores data from response.
         /// </summary>
         /// <param name="jsonpath">Jsonpath expression.</param>
@@ -165,7 +174,8 @@
         public void ThenIValidateThatTheResponseBodyContainsTheFollowingValues(Table table)
         {
             var dictionary = TableUtils.ConvertToDictionary(table);
-            AssertUtils.AssertExpectedValues(response, dictionary);
+            var fieldsMapped = Mapper.MapValues(dictionary, helper.GetData());
+            AssertUtils.AssertExpectedValues(response, fieldsMapped);
         }
     }
 }
