@@ -25,6 +25,11 @@
     <None Include="Schemas\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+<<<<<<< Updated upstream
+=======
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\DeleteProject.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\GetProject.feature.cs" />
+>>>>>>> Stashed changes
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\PostProject.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\PutProject.feature.cs" />
     <None Include="allureConfig.json">
