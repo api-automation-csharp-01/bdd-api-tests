@@ -1,6 +1,6 @@
 ﻿@regression
 Feature: Update Campaign
-
+	
 Background: Create Campaign
 	Given I use the "Salesforce" service client
 	When I send a "Salesforce" POST request to "Campaign" with the following json body
@@ -59,7 +59,7 @@ Scenario: Campaign name and status is updated
 		| Type              | Webinar            |	
 		| Status            | Aborted            |
 
-@negative	
+@negative	@deleteSalesforceCampaign
 Scenario: Campaign doesn't allow to change the Id
 	Given I use the "Salesforce" service client
 	When I send a "Salesforce" PATCH request to "campaign/{CAMPAIGN_ID}" with the following json body
@@ -74,7 +74,7 @@ Scenario: Campaign doesn't allow to change the Id
 		| [0].message   | The Id field should not be specified in the sobject data. |
 		| [0].errorCode | INVALID_FIELD                  					        |		 											   
 
-@negative
+@negative @deleteSalesforceCampaign
 Scenario: Campaign doesn't allow to include a new column
 	Given I use the "Salesforce" service client
 	When I send a "Salesforce" PATCH request to "campaign/{CAMPAIGN_ID}" with the following json body
@@ -89,7 +89,7 @@ Scenario: Campaign doesn't allow to include a new column
 		| [0].message   | No such column 'ColumnTest' on sobject of type Campaign |
 		| [0].errorCode | INVALID_FIELD                                           |
 	
-@negative
+@negative @deleteSalesforceCampaign
 Scenario: Campaign name doesn't accept an empty value
 	Given I use the "Salesforce" service client
 	When I send a "Salesforce" PATCH request to "campaign/{CAMPAIGN_ID}" with the following json body

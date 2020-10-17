@@ -44,6 +44,12 @@
     <SpecFlowFeatureFiles Update="Features\Salesforce\PatchCampaign.feature">
       <CodeBehindFile>Features/Examples/PostProject.feature.cs</CodeBehindFile>
     </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Salesforce\GetCampaign.feature">
+      <CodeBehindFile>Features/Examples/PostProject.feature.cs</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Salesforce\DeleteCampaign.feature">
+      <CodeBehindFile>Features/Examples/PostProject.feature.cs</CodeBehindFile>
+    </SpecFlowFeatureFiles>
   </ItemGroup>
 
 </Project>
