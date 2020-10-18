@@ -138,6 +138,15 @@ namespace APIAutomationTests.Steps
         }
 
         /// <summary>
+        /// Stored campaign ID for deleting.
+        /// </summary>
+        [When(@"I store campaign id for workspace cleaning")]
+        public void WhenIStoreCampaignIdForWorkspaceCleaning()
+        {
+            helper.StoreId(response.GetValue("id"));
+        }
+
+        /// <summary>
         /// Stores data from response.
         /// </summary>
         /// <param name="jsonpath">Jsonpath expression.</param>

@@ -1,0 +1,245 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "required": [
+    "objectDescribe",
+    "recentItems"
+  ],
+  "properties": {
+    "objectDescribe": {
+      "$id": "#/properties/objectDescribe",
+      "type": "object",
+      "required": [
+        "activateable",
+        "createable",
+        "custom",
+        "customSetting",
+        "deepCloneable",
+        "deletable",
+        "deprecatedAndHidden",
+        "feedEnabled",
+        "hasSubtypes",
+        "isInterface",
+        "isSubtype",
+        "keyPrefix",
+        "label",
+        "labelPlural",
+        "layoutable",
+        "mergeable",
+        "mruEnabled",
+        "name",
+        "queryable",
+        "replicateable",
+        "retrieveable",
+        "searchable",
+        "triggerable",
+        "undeletable",
+        "updateable",
+        "urls"
+      ],
+      "properties": {
+        "activateable": {
+          "$id": "#/properties/objectDescribe/properties/activateable",
+          "type": "boolean"
+        },
+        "createable": {
+          "$id": "#/properties/objectDescribe/properties/createable",
+          "type": "boolean"
+        },
+        "custom": {
+          "$id": "#/properties/objectDescribe/properties/custom",
+          "type": "boolean"
+        },
+        "customSetting": {
+          "$id": "#/properties/objectDescribe/properties/customSetting",
+          "type": "boolean"
+        },
+        "deepCloneable": {
+          "$id": "#/properties/objectDescribe/properties/deepCloneable",
+          "type": "boolean"
+        },
+        "deletable": {
+          "$id": "#/properties/objectDescribe/properties/deletable",
+          "type": "boolean"
+        },
+        "deprecatedAndHidden": {
+          "$id": "#/properties/objectDescribe/properties/deprecatedAndHidden",
+          "type": "boolean"
+        },
+        "feedEnabled": {
+          "$id": "#/properties/objectDescribe/properties/feedEnabled",
+          "type": "boolean"
+        },
+        "hasSubtypes": {
+          "$id": "#/properties/objectDescribe/properties/hasSubtypes",
+          "type": "boolean"
+        },
+        "isInterface": {
+          "$id": "#/properties/objectDescribe/properties/isInterface",
+          "type": "boolean"
+        },
+        "isSubtype": {
+          "$id": "#/properties/objectDescribe/properties/isSubtype",
+          "type": "boolean"
+        },
+        "keyPrefix": {
+          "$id": "#/properties/objectDescribe/properties/keyPrefix",
+          "type": "string"
+        },
+        "label": {
+          "$id": "#/properties/objectDescribe/properties/label",
+          "type": "string"
+        },
+        "labelPlural": {
+          "$id": "#/properties/objectDescribe/properties/labelPlural",
+          "type": "string"
+        },
+        "layoutable": {
+          "$id": "#/properties/objectDescribe/properties/layoutable",
+          "type": "boolean"
+        },
+        "mergeable": {
+          "$id": "#/properties/objectDescribe/properties/mergeable",
+          "type": "boolean"
+        },
+        "mruEnabled": {
+          "$id": "#/properties/objectDescribe/properties/mruEnabled",
+          "type": "boolean"
+        },
+        "name": {
+          "$id": "#/properties/objectDescribe/properties/name",
+          "type": "string"
+        },
+        "queryable": {
+          "$id": "#/properties/objectDescribe/properties/queryable",
+          "type": "boolean"
+        },
+        "replicateable": {
+          "$id": "#/properties/objectDescribe/properties/replicateable",
+          "type": "boolean"
+        },
+        "retrieveable": {
+          "$id": "#/properties/objectDescribe/properties/retrieveable",
+          "type": "boolean"
+        },
+        "searchable": {
+          "$id": "#/properties/objectDescribe/properties/searchable",
+          "type": "boolean"
+        },
+        "triggerable": {
+          "$id": "#/properties/objectDescribe/properties/triggerable",
+          "type": "boolean"
+        },
+        "undeletable": {
+          "$id": "#/properties/objectDescribe/properties/undeletable",
+          "type": "boolean"
+        },
+        "updateable": {
+          "$id": "#/properties/objectDescribe/properties/updateable",
+          "type": "boolean"
+        },
+        "urls": {
+          "$id": "#/properties/objectDescribe/properties/urls",
+          "type": "object",
+          "required": [
+            "compactLayouts",
+            "rowTemplate",
+            "approvalLayouts",
+            "defaultValues",
+            "listviews",
+            "describe",
+            "quickActions",
+            "layouts",
+            "sobject"
+          ],
+          "properties": {
+            "compactLayouts": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/compactLayouts",
+              "type": "string"
+            },
+            "rowTemplate": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/rowTemplate",
+              "type": "string"
+            },
+            "approvalLayouts": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/approvalLayouts",
+              "type": "string"
+            },
+            "defaultValues": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/defaultValues",
+              "type": "string"
+            },
+            "listviews": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/listviews",
+              "type": "string"
+            },
+            "describe": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/describe",
+              "type": "string"
+            },
+            "quickActions": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/quickActions",
+              "type": "string"
+            },
+            "layouts": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/layouts",
+              "type": "string"
+            },
+            "sobject": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/sobject",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "recentItems": {
+      "$id": "#/properties/recentItems",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/recentItems/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/recentItems/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "attributes",
+              "Id",
+              "Name"
+            ],
+            "properties": {
+              "attributes": {
+                "$id": "#/properties/recentItems/items/anyOf/0/properties/attributes",
+                "type": "object",
+                "required": [
+                  "type",
+                  "url"
+                ],
+                "properties": {
+                  "type": {
+                    "$id": "#/properties/recentItems/items/anyOf/0/properties/attributes/properties/type",
+                    "type": "string"
+                  },
+                  "url": {
+                    "$id": "#/properties/recentItems/items/anyOf/0/properties/attributes/properties/url",
+                    "type": "string"
+                  }
+                }
+              },
+              "Id": {
+                "$id": "#/properties/recentItems/items/anyOf/0/properties/Id",
+                "type": "string"
+              },
+              "Name": {
+                "$id": "#/properties/recentItems/items/anyOf/0/properties/Name",
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
