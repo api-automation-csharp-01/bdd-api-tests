@@ -6,7 +6,7 @@ Background: Create project
 	When I send a "Pivotal" POST request to "projects" with the following json body
 		"""
 		{
-			"name": "Test automation CSharp"
+			"name": "Project to Update"
 		}
 		"""
 	And I store project id for workspace cleaning
@@ -19,13 +19,13 @@ Scenario: Project is updated with name
 	When I send a "Pivotal" PUT request to "projects/{PROJECT_ID}" with the following json body
 		"""
 		{
-			"name": "New project name"
+			"name": "Project already updated"
 		}
 		"""
-	Then I validate that the response status code is "200"
+	Then  I validate that the response status code is "200"
 	And I validate that the response body match "Schemas/Pivotal/PutProjectSchema.json" JSON schema
 	And I validate that the response body contains the following values
 		| jsonpath       | expectedValue    |
-		| name           | New project name |
+		| name           | Project already updated |
 		| kind           | project          |
 		| week_start_day | Monday           |

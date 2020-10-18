@@ -5,7 +5,7 @@ Background: Create project
 	When I send a "Pivotal" POST request to "projects" with the following json body
 		"""
 		{
-			"name": "Test automation CSharp"
+			"name": "Project to GET"
 		}
 		"""
 	And I store project id for workspace cleaning
