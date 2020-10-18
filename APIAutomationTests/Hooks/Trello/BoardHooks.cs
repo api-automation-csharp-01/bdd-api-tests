@@ -5,33 +5,51 @@
     using TechTalk.SpecFlow;
 
     /// <summary>
-    /// Class to handle specifi handles.
+    /// Defines boards hooks class.
     /// </summary>
     [Binding]
-    public sealed class BoardHooks
+    public class BoardHooks
     {
         private Helper helper;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BoardHooks"/> class.
         /// </summary>
-        /// <param name="helper"> Instance that handles ids.</param>
+        /// <param name="helper">Helper class.</param>
         public BoardHooks(Helper helper)
         {
             this.helper = helper;
         }
 
         /// <summary>
-        /// RunThis to cleanup boards.
+        /// Create board.
         /// </summary>
-        [AfterScenario(Order = 101)]
-        [Scope(Tag = "deleteTrelloBoard")]
-        public void AfterScenario()
+        [BeforeScenario(Order = 1)]
+        [Scope(Tag = "createTrelloBoard")]
+        public void CreateBoard()
         {
-            foreach (var id in helper.GetIds())
-            {
-                var request = new TrelloRequest("boards/" + id);
+            var request = new TrelloRequest(resource: "boards");
+            var requestBody = $"{{\"name\": \"Board created\"}}";
+            request.GetRequest().AddJsonBody(requestBody);
 
+            // Send Request
+            var response = RequestManager.Post(TrelloClient.GetInstance(), request);
+
+            // Parse response to json object
+            helper.StoreId(response.GetValue("id"));
+            helper.StoreData("BOARD_ID", response.GetValue("id"));
+        }
+
+        /// <summary>
+        /// Delete board.
+        /// </summary>
+        [AfterScenario(Order = 100)]
+        [Scope(Tag = "deleteTrelloBoard")]
+        public void DeleteBoard()
+        {
+            foreach (string id in helper.GetIds())
+            {
+                var request = new TrelloRequest(resource: "boards/" + id);
                 RequestManager.Delete(TrelloClient.GetInstance(), request);
             }
         }
