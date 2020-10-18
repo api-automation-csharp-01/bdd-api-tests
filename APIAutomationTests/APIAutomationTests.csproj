@@ -25,11 +25,8 @@
     <None Include="Schemas\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-<<<<<<< Updated upstream
-=======
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\DeleteProject.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\GetProject.feature.cs" />
->>>>>>> Stashed changes
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\PostProject.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\PutProject.feature.cs" />
     <None Include="allureConfig.json">
@@ -42,30 +39,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\APIAutomationCore\APIAutomationCore.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Features\Pivotal\PostProject.feature.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-    <Compile Update="Features\Pivotal\PutProject.feature.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <SpecFlowFeatureFiles Update="Features\Pivotal\PostProject.feature">
-      <Visible>$(UsingMicrosoftNETSdk)</Visible>
-      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
-    </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Pivotal\PutProject.feature">
-      <Visible>$(UsingMicrosoftNETSdk)</Visible>
-      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
-    </SpecFlowFeatureFiles>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Features\Examples\" />
   </ItemGroup>
 
 </Project>
