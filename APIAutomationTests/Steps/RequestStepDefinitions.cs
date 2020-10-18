@@ -122,7 +122,7 @@ namespace APIAutomationTests.Steps
         /// <summary>
         /// Stored project ID for deleting.
         /// </summary>
-        [When(@"I store project id for workspace cleaning")]
+        [When(@"I store (?:project|response|board) id for workspace cleaning")]
         public void WhenIStoreProjectIdForWorkspaceCleaning()
         {
             helper.StoreId(response.GetValue("id"));
@@ -133,6 +133,15 @@ namespace APIAutomationTests.Steps
         /// </summary>
         [StepDefinition(@"I store response id for cleaning environment")]
         public void StoreIdToCleaningEnvironment()
+        {
+            helper.StoreId(response.GetValue("id"));
+        }
+
+        /// <summary>
+        /// Stored campaign ID for deleting.
+        /// </summary>
+        [When(@"I store campaign id for workspace cleaning")]
+        public void WhenIStoreCampaignIdForWorkspaceCleaning()
         {
             helper.StoreId(response.GetValue("id"));
         }
@@ -179,6 +188,37 @@ namespace APIAutomationTests.Steps
             var dictionary = TableUtils.ConvertToDictionary(table);
             var fieldsMapped = Mapper.MapValues(dictionary, helper.GetData());
             AssertUtils.AssertExpectedValues(response, fieldsMapped);
+        }
+
+        /// <summary>
+        /// Validates response status code.
+        /// </summary>
+        /// <param name="expectedStatusCode">Expected status code.</param>
+        [When(@"I validate that the response status code is ""(.*)""")]
+        public void WhenIValidateThatTheResponseStatusCodeIs(int expectedStatusCode)
+        {
+            ThenIValidateThatTheResponseStatusCodeIs(expectedStatusCode);
+        }
+
+        /// <summary>
+        /// stored label Id for deleting.
+        /// </summary>
+        [Then(@"I store label id for workspace cleaning")]
+        public void ThenIStoreLabelIdForWorkspaceCleaning()
+        {
+            helper.StoreId(response.GetValue("id"));
+        }
+
+        /// <summary>
+        /// Stores data from response.
+        /// </summary>
+        /// <param name="jsonpath">jsonpath expression.</param>
+        /// <param name="key">Key identifier.</param>
+        [Then(@"I store response ""(.*)"" value as ""(.*)""")]
+        public void ThenIStoreResponseValueAs(string jsonpath, string key)
+        {
+            var value = response.GetValue(jsonpath);
+            helper.StoreData(key, value);
         }
     }
 }

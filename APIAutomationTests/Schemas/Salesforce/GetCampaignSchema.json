@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "required": [
+    "attributes",
+    "Id",
+    "IsDeleted",
+    "Name",
+    "ParentId",
+    "Type",
+    "Status",
+    "StartDate",
+    "EndDate",
+    "ExpectedRevenue",
+    "BudgetedCost",
+    "ActualCost",
+    "ExpectedResponse",
+    "NumberSent",
+    "IsActive",
+    "Description",
+    "NumberOfLeads",
+    "NumberOfConvertedLeads",
+    "NumberOfContacts",
+    "NumberOfResponses",
+    "NumberOfOpportunities",
+    "NumberOfWonOpportunities",
+    "AmountAllOpportunities",
+    "AmountWonOpportunities",
+    "OwnerId",
+    "CreatedDate",
+    "CreatedById",
+    "LastModifiedDate",
+    "LastModifiedById",
+    "SystemModstamp",
+    "LastActivityDate",
+    "LastViewedDate",
+    "LastReferencedDate",
+    "CampaignMemberRecordTypeId"
+  ],
+  "properties": {
+    "attributes": {
+      "$id": "#/properties/attributes",
+      "type": "object",
+      "required": [
+        "type",
+        "url"
+      ],
+      "properties": {
+        "type": {
+          "$id": "#/properties/attributes/properties/type",
+          "type": "string"
+        },
+        "url": {
+          "$id": "#/properties/attributes/properties/url",
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Id": {
+      "$id": "#/properties/Id",
+      "type": "string"
+    },
+    "IsDeleted": {
+      "$id": "#/properties/IsDeleted",
+      "type": "boolean"
+    },
+    "Name": {
+      "$id": "#/properties/Name",
+      "type": "string"
+    },
+    "ParentId": {
+      "$id": "#/properties/ParentId",
+      "type": "null"
+    },
+    "Type": {
+      "$id": "#/properties/Type",
+      "type": "string"
+    },
+    "Status": {
+      "$id": "#/properties/Status",
+      "type": "string"
+    },
+    "StartDate": {
+      "$id": "#/properties/StartDate",
+      "type": "null"
+    },
+    "EndDate": {
+      "$id": "#/properties/EndDate",
+      "type": "null"
+    },
+    "ExpectedRevenue": {
+      "$id": "#/properties/ExpectedRevenue",
+      "type": "null"
+    },
+    "BudgetedCost": {
+      "$id": "#/properties/BudgetedCost",
+      "type": "null"
+    },
+    "ActualCost": {
+      "$id": "#/properties/ActualCost",
+      "type": "null"
+    },
+    "ExpectedResponse": {
+      "$id": "#/properties/ExpectedResponse",
+      "type": "number"
+    },
+    "NumberSent": {
+      "$id": "#/properties/NumberSent",
+      "type": "number"
+    },
+    "IsActive": {
+      "$id": "#/properties/IsActive",
+      "type": "boolean"
+    },
+    "Description": {
+      "$id": "#/properties/Description",
+      "type": "null"
+    },
+    "NumberOfLeads": {
+      "$id": "#/properties/NumberOfLeads",
+      "type": "integer"
+    },
+    "NumberOfConvertedLeads": {
+      "$id": "#/properties/NumberOfConvertedLeads",
+      "type": "integer"
+    },
+    "NumberOfContacts": {
+      "$id": "#/properties/NumberOfContacts",
+      "type": "integer"
+    },
+    "NumberOfResponses": {
+      "$id": "#/properties/NumberOfResponses",
+      "type": "integer"
+    },
+    "NumberOfOpportunities": {
+      "$id": "#/properties/NumberOfOpportunities",
+      "type": "integer"
+    },
+    "NumberOfWonOpportunities": {
+      "$id": "#/properties/NumberOfWonOpportunities",
+      "type": "integer"
+    },
+    "AmountAllOpportunities": {
+      "$id": "#/properties/AmountAllOpportunities",
+      "type": "number"
+    },
+    "AmountWonOpportunities": {
+      "$id": "#/properties/AmountWonOpportunities",
+      "type": "number"
+    },
+    "OwnerId": {
+      "$id": "#/properties/OwnerId",
+      "type": "string"
+    },
+    "CreatedDate": {
+      "$id": "#/properties/CreatedDate",
+      "type": "string"
+    },
+    "CreatedById": {
+      "$id": "#/properties/CreatedById",
+      "type": "string"
+    },
+    "LastModifiedDate": {
+      "$id": "#/properties/LastModifiedDate",
+      "type": "string"
+    },
+    "LastModifiedById": {
+      "$id": "#/properties/LastModifiedById",
+      "type": "string"
+    },
+    "SystemModstamp": {
+      "$id": "#/properties/SystemModstamp",
+      "type": "string"
+    },
+    "LastActivityDate": {
+      "$id": "#/properties/LastActivityDate",
+      "type": "null"
+    },
+    "LastViewedDate": {
+      "$id": "#/properties/LastViewedDate",
+      "type": "string"
+    },
+    "LastReferencedDate": {
+      "$id": "#/properties/LastReferencedDate",
+      "type": "string"
+    },
+    "CampaignMemberRecordTypeId": {
+      "$id": "#/properties/CampaignMemberRecordTypeId",
+      "type": "null"
+    }
+  },
+  "additionalProperties": true
+}

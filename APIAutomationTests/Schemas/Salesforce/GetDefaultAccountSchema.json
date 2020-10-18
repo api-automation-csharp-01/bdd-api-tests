@@ -1,0 +1,360 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "required": [
+    "attributes",
+    "Id",
+    "IsDeleted",
+    "MasterRecordId",
+    "Name",
+    "Type",
+    "ParentId",
+    "BillingStreet",
+    "BillingCity",
+    "BillingState",
+    "BillingPostalCode",
+    "BillingCountry",
+    "BillingLatitude",
+    "BillingLongitude",
+    "BillingGeocodeAccuracy",
+    "BillingAddress",
+    "ShippingStreet",
+    "ShippingCity",
+    "ShippingState",
+    "ShippingPostalCode",
+    "ShippingCountry",
+    "ShippingLatitude",
+    "ShippingLongitude",
+    "ShippingGeocodeAccuracy",
+    "ShippingAddress",
+    "Phone",
+    "Fax",
+    "AccountNumber",
+    "Website",
+    "PhotoUrl",
+    "Sic",
+    "Industry",
+    "AnnualRevenue",
+    "NumberOfEmployees",
+    "Ownership",
+    "TickerSymbol",
+    "Description",
+    "Rating",
+    "Site",
+    "OwnerId",
+    "CreatedDate",
+    "CreatedById",
+    "LastModifiedDate",
+    "LastModifiedById",
+    "SystemModstamp",
+    "LastActivityDate",
+    "LastViewedDate",
+    "LastReferencedDate",
+    "Jigsaw",
+    "JigsawCompanyId",
+    "CleanStatus",
+    "AccountSource",
+    "DunsNumber",
+    "Tradestyle",
+    "NaicsCode",
+    "NaicsDesc",
+    "YearStarted",
+    "SicDesc",
+    "DandbCompanyId",
+    "OperatingHoursId",
+    "CustomerPriority__c",
+    "SLA__c",
+    "Active__c",
+    "NumberofLocations__c",
+    "UpsellOpportunity__c",
+    "SLASerialNumber__c",
+    "SLAExpirationDate__c"
+  ],
+  "properties": {
+    "attributes": {
+      "$id": "#/properties/attributes",
+      "type": "object",
+      "required": [
+        "type",
+        "url"
+      ],
+      "properties": {
+        "type": {
+          "$id": "#/properties/attributes/properties/type",
+          "type": "string"
+        },
+        "url": {
+          "$id": "#/properties/attributes/properties/url",
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Id": {
+      "$id": "#/properties/Id",
+      "type": "string"
+    },
+    "IsDeleted": {
+      "$id": "#/properties/IsDeleted",
+      "type": "boolean"
+    },
+    "MasterRecordId": {
+      "$id": "#/properties/MasterRecordId",
+      "type": "null"
+    },
+    "Name": {
+      "$id": "#/properties/Name",
+      "type": "string"
+    },
+    "Type": {
+      "$id": "#/properties/Type",
+      "type": "null"
+    },
+    "ParentId": {
+      "$id": "#/properties/ParentId",
+      "type": "null"
+    },
+    "BillingStreet": {
+      "$id": "#/properties/BillingStreet",
+      "type": "null"
+    },
+    "BillingCity": {
+      "$id": "#/properties/BillingCity",
+      "type": "null"
+    },
+    "BillingState": {
+      "$id": "#/properties/BillingState",
+      "type": "null"
+    },
+    "BillingPostalCode": {
+      "$id": "#/properties/BillingPostalCode",
+      "type": "null"
+    },
+    "BillingCountry": {
+      "$id": "#/properties/BillingCountry",
+      "type": "null"
+    },
+    "BillingLatitude": {
+      "$id": "#/properties/BillingLatitude",
+      "type": "null"
+    },
+    "BillingLongitude": {
+      "$id": "#/properties/BillingLongitude",
+      "type": "null"
+    },
+    "BillingGeocodeAccuracy": {
+      "$id": "#/properties/BillingGeocodeAccuracy",
+      "type": "null"
+    },
+    "BillingAddress": {
+      "$id": "#/properties/BillingAddress",
+      "type": "null"
+    },
+    "ShippingStreet": {
+      "$id": "#/properties/ShippingStreet",
+      "type": "null"
+    },
+    "ShippingCity": {
+      "$id": "#/properties/ShippingCity",
+      "type": "null"
+    },
+    "ShippingState": {
+      "$id": "#/properties/ShippingState",
+      "type": "null"
+    },
+    "ShippingPostalCode": {
+      "$id": "#/properties/ShippingPostalCode",
+      "type": "null"
+    },
+    "ShippingCountry": {
+      "$id": "#/properties/ShippingCountry",
+      "type": "null"
+    },
+    "ShippingLatitude": {
+      "$id": "#/properties/ShippingLatitude",
+      "type": "null"
+    },
+    "ShippingLongitude": {
+      "$id": "#/properties/ShippingLongitude",
+      "type": "null"
+    },
+    "ShippingGeocodeAccuracy": {
+      "$id": "#/properties/ShippingGeocodeAccuracy",
+      "type": "null"
+    },
+    "ShippingAddress": {
+      "$id": "#/properties/ShippingAddress",
+      "type": "null"
+    },
+    "Phone": {
+      "$id": "#/properties/Phone",
+      "type": "null"
+    },
+    "Fax": {
+      "$id": "#/properties/Fax",
+      "type": "null"
+    },
+    "AccountNumber": {
+      "$id": "#/properties/AccountNumber",
+      "type": "null"
+    },
+    "Website": {
+      "$id": "#/properties/Website",
+      "type": "null"
+    },
+    "PhotoUrl": {
+      "$id": "#/properties/PhotoUrl",
+      "type": "string"
+    },
+    "Sic": {
+      "$id": "#/properties/Sic",
+      "type": "null"
+    },
+    "Industry": {
+      "$id": "#/properties/Industry",
+      "type": "null"
+    },
+    "AnnualRevenue": {
+      "$id": "#/properties/AnnualRevenue",
+      "type": "null"
+    },
+    "NumberOfEmployees": {
+      "$id": "#/properties/NumberOfEmployees",
+      "type": "null"
+    },
+    "Ownership": {
+      "$id": "#/properties/Ownership",
+      "type": "null"
+    },
+    "TickerSymbol": {
+      "$id": "#/properties/TickerSymbol",
+      "type": "null"
+    },
+    "Description": {
+      "$id": "#/properties/Description",
+      "type": "null"
+    },
+    "Rating": {
+      "$id": "#/properties/Rating",
+      "type": "null"
+    },
+    "Site": {
+      "$id": "#/properties/Site",
+      "type": "null"
+    },
+    "OwnerId": {
+      "$id": "#/properties/OwnerId",
+      "type": "string"
+    },
+    "CreatedDate": {
+      "$id": "#/properties/CreatedDate",
+      "type": "string"
+    },
+    "CreatedById": {
+      "$id": "#/properties/CreatedById",
+      "type": "string"
+    },
+    "LastModifiedDate": {
+      "$id": "#/properties/LastModifiedDate",
+      "type": "string"
+    },
+    "LastModifiedById": {
+      "$id": "#/properties/LastModifiedById",
+      "type": "string"
+    },
+    "SystemModstamp": {
+      "$id": "#/properties/SystemModstamp",
+      "type": "string"
+    },
+    "LastActivityDate": {
+      "$id": "#/properties/LastActivityDate",
+      "type": "null"
+    },
+    "LastViewedDate": {
+      "$id": "#/properties/LastViewedDate",
+      "type": "string"
+    },
+    "LastReferencedDate": {
+      "$id": "#/properties/LastReferencedDate",
+      "type": "string"
+    },
+    "Jigsaw": {
+      "$id": "#/properties/Jigsaw",
+      "type": "null"
+    },
+    "JigsawCompanyId": {
+      "$id": "#/properties/JigsawCompanyId",
+      "type": "null"
+    },
+    "CleanStatus": {
+      "$id": "#/properties/CleanStatus",
+      "type": "string"
+    },
+    "AccountSource": {
+      "$id": "#/properties/AccountSource",
+      "type": "null"
+    },
+    "DunsNumber": {
+      "$id": "#/properties/DunsNumber",
+      "type": "null"
+    },
+    "Tradestyle": {
+      "$id": "#/properties/Tradestyle",
+      "type": "null"
+    },
+    "NaicsCode": {
+      "$id": "#/properties/NaicsCode",
+      "type": "null"
+    },
+    "NaicsDesc": {
+      "$id": "#/properties/NaicsDesc",
+      "type": "null"
+    },
+    "YearStarted": {
+      "$id": "#/properties/YearStarted",
+      "type": "null"
+    },
+    "SicDesc": {
+      "$id": "#/properties/SicDesc",
+      "type": "null"
+    },
+    "DandbCompanyId": {
+      "$id": "#/properties/DandbCompanyId",
+      "type": "null"
+    },
+    "OperatingHoursId": {
+      "$id": "#/properties/OperatingHoursId",
+      "type": "null"
+    },
+    "CustomerPriority__c": {
+      "$id": "#/properties/CustomerPriority__c",
+      "type": "null"
+    },
+    "SLA__c": {
+      "$id": "#/properties/SLA__c",
+      "type": "null"
+    },
+    "Active__c": {
+      "$id": "#/properties/Active__c",
+      "type": "null"
+    },
+    "NumberofLocations__c": {
+      "$id": "#/properties/NumberofLocations__c",
+      "type": "null"
+    },
+    "UpsellOpportunity__c": {
+      "$id": "#/properties/UpsellOpportunity__c",
+      "type": "null"
+    },
+    "SLASerialNumber__c": {
+      "$id": "#/properties/SLASerialNumber__c",
+      "type": "null"
+    },
+    "SLAExpirationDate__c": {
+      "$id": "#/properties/SLAExpirationDate__c",
+      "type": "null"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,100 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "required": [
+        "attributes",
+        "Id",
+        "Name",
+        "DeveloperName",
+        "RelatedId",
+        "Type",
+        "Email",
+        "OwnerId",
+        "DoesSendEmailToMembers",
+        "DoesIncludeBosses",
+        "CreatedDate",
+        "CreatedById",
+        "LastModifiedDate",
+        "LastModifiedById",
+        "SystemModstamp"
+    ],
+    "properties": {
+        "attributes": {
+            "$id": "#/properties/attributes",
+            "type": "object",
+            "required": [
+                "type",
+                "url"
+            ],
+            "properties": {
+                "type": {
+                    "$id": "#/properties/attributes/properties/type",
+                    "type": "string"
+                },
+                "url": {
+                    "$id": "#/properties/attributes/properties/url",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true
+        },
+        "Id": {
+            "$id": "#/properties/Id",
+            "type": "string"
+        },
+        "Name": {
+            "$id": "#/properties/Name",
+            "type": "string"
+        },
+        "DeveloperName": {
+            "$id": "#/properties/DeveloperName",
+            "type": "string"
+        },
+        "RelatedId": {
+            "$id": "#/properties/RelatedId",
+            "type": "null"
+        },
+        "Type": {
+            "$id": "#/properties/Type",
+            "type": "string"
+        },
+        "Email": {
+            "$id": "#/properties/Email",
+            "type": "null"
+        },
+        "OwnerId": {
+            "$id": "#/properties/OwnerId",
+            "type": "string"
+        },
+        "DoesSendEmailToMembers": {
+            "$id": "#/properties/DoesSendEmailToMembers",
+            "type": "boolean"
+        },
+        "DoesIncludeBosses": {
+            "$id": "#/properties/DoesIncludeBosses",
+            "type": "boolean"
+        },
+        "CreatedDate": {
+            "$id": "#/properties/CreatedDate",
+            "type": "string"
+        },
+        "CreatedById": {
+            "$id": "#/properties/CreatedById",
+            "type": "string"
+        },
+        "LastModifiedDate": {
+            "$id": "#/properties/LastModifiedDate",
+            "type": "string"
+        },
+        "LastModifiedById": {
+            "$id": "#/properties/LastModifiedById",
+            "type": "string"
+        },
+        "SystemModstamp": {
+            "$id": "#/properties/SystemModstamp",
+            "type": "string"
+        }
+    },
+    "additionalProperties": true
+}

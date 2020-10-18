@@ -11,6 +11,7 @@ namespace APIAutomationCore.Client
         private readonly IRestResponse response;
         private readonly JObject jObject;
         private readonly JArray jArray;
+        private readonly JValue jValue;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Response"/> class.
@@ -25,15 +26,20 @@ namespace APIAutomationCore.Client
                 {
                     jArray = JArray.Parse(response.Content);
                 }
-                else
+                else if (response.Content.StartsWith("{"))
                 {
                     jObject = JObject.Parse(response.Content);
+                }
+                else
+                {
+                    jValue = (JValue)response.Content;
                 }
             }
             else
             {
                 jArray = new JArray();
                 jObject = new JObject();
+                jValue = new JValue(string.Empty);
             }
         }
 
@@ -82,6 +88,15 @@ namespace APIAutomationCore.Client
         public JArray GetJsonJArray()
         {
             return jArray;
+        }
+
+        /// <summary>
+        /// Gest response json value.
+        /// </summary>
+        /// <returns>String.</returns>
+        public JValue GetJsonValue()
+        {
+            return jValue;
         }
 
         /// <summary>

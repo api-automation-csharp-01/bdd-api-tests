@@ -5,7 +5,7 @@
     using TechTalk.SpecFlow;
 
     /// <summary>
-    /// This class have the common hook for trello.
+    /// Defines boards hooks class.
     /// </summary>
     [Binding]
     public class BoardHooks
@@ -14,7 +14,6 @@
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BoardHooks"/> class.
-        ///  Initializes a new instance for BoardHooks class.
         /// </summary>
         /// <param name="helper">Helper class.</param>
         public BoardHooks(Helper helper)
@@ -27,15 +26,14 @@
         /// </summary>
         [BeforeScenario(Order = 1)]
         [Scope(Tag = "createBoard")]
+        [Scope(Tag = "createTrelloBoard")]
         public void CreateBoard()
         {
             var request = new TrelloRequest(resource: "boards");
-            var requestBody = @"{
-                ""name"":""myFirstTestBoard""
-            }";
+            var requestBody = $"{{\"name\": \"Board created\"}}";
             request.GetRequest().AddJsonBody(requestBody);
 
-            // Send request
+            // Send Request
             var response = RequestManager.Post(TrelloClient.GetInstance(), request);
 
             // Parse response to json object
@@ -65,9 +63,10 @@
         }
 
         /// <summary>
-        /// Delete a board.
+        /// Delete board.
         /// </summary>
         [AfterScenario(Order = 100)]
+        [Scope(Tag = "deleteTrelloBoard")]
         [Scope(Tag = "deleteBoard")]
         public void DeleteBoard()
         {
