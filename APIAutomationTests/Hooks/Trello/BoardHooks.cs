@@ -1,11 +1,11 @@
-﻿namespace SpecflowAPITests.Hooks.Trello
+﻿namespace APIAutomationTests.Hooks.Trello
 {
     using APIAutomationCore.Client;
     using APIAutomationTests.Helpers;
     using TechTalk.SpecFlow;
 
     /// <summary>
-    /// Defines borads hooks class.
+    /// Defines boards hooks class.
     /// </summary>
     [Binding]
     public class BoardHooks

@@ -1,0 +1,720 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "id": "5f88e3573b29d0365a048fff",
+      "checkItemStates": [],
+      "closed": false,
+      "dateLastActivity": "2020-10-16T01:52:57.413Z",
+      "desc": "By API",
+      "descData": {
+        "emoji": {}
+      },
+      "dueReminder": null,
+      "idBoard": "5e333728e7cfab811410ec71",
+      "idList": "5a8af292de3184f92b54b3e0",
+      "idMembersVoted": [],
+      "idShort": 44,
+      "idAttachmentCover": null,
+      "idLabels": [],
+      "manualCoverAttachment": false,
+      "name": "Updated name",
+      "pos": 1376255,
+      "shortLink": "uVn0eLtl",
+      "isTemplate": false,
+      "dueComplete": false,
+      "due": null,
+      "labels": [],
+      "shortUrl": "https://trello.com/c/uVn0eLtl",
+      "start": null,
+      "url": "https://trello.com/c/uVn0eLtl/44-updated-name",
+      "cover": {
+        "idAttachment": null,
+        
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "light"
+      },
+      "idMembers": [],
+      "email": null,
+      "badges": {
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false,
+        "fogbugz": "",
+        "checkItems": 0,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "attachments": 0,
+        "description": true,
+        "due": null,
+        "dueComplete": false,
+        "start": null
+      },
+      "subscribed": false,
+      "idChecklists": []
+    }
+  ],
+  "required": [
+    "id",
+    "checkItemStates",
+    "closed",
+    "dateLastActivity",
+    "desc",
+    "descData",
+    "dueReminder",
+    "idBoard",
+    "idList",
+    "idMembersVoted",
+    "idShort",
+    "idAttachmentCover",
+    "idLabels",
+    "manualCoverAttachment",
+    "name",
+    "pos",
+    "shortLink",
+    "isTemplate",
+    "dueComplete",
+    "due",
+    "labels",
+    "shortUrl",
+    "start",
+    "url",
+    "cover",
+    "idMembers",
+    "email",
+    "badges",
+    "subscribed",
+    "idChecklists"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "The id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5f88e3573b29d0365a048fff"
+      ]
+    },
+    "checkItemStates": {
+      "$id": "#/properties/checkItemStates",
+      "type": "array",
+      "title": "The checkItemStates schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/checkItemStates/items"
+      }
+    },
+    "closed": {
+      "$id": "#/properties/closed",
+      "type": "boolean",
+      "title": "The closed schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "dateLastActivity": {
+      "$id": "#/properties/dateLastActivity",
+      "type": "string",
+      "title": "The dateLastActivity schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-10-16T01:52:57.413Z"
+      ]
+    },
+    "desc": {
+      "$id": "#/properties/desc",
+      "type": "string",
+      "title": "The desc schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "By API"
+      ]
+    },
+    
+    "dueReminder": {
+      "$id": "#/properties/dueReminder",
+      "type": "null",
+      "title": "The dueReminder schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "idBoard": {
+      "$id": "#/properties/idBoard",
+      "type": "string",
+      "title": "The idBoard schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e333728e7cfab811410ec71"
+      ]
+    },
+    "idList": {
+      "$id": "#/properties/idList",
+      "type": "string",
+      "title": "The idList schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5a8af292de3184f92b54b3e0"
+      ]
+    },
+    "idMembersVoted": {
+      "$id": "#/properties/idMembersVoted",
+      "type": "array",
+      "title": "The idMembersVoted schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/idMembersVoted/items"
+      }
+    },
+    "idShort": {
+      "$id": "#/properties/idShort",
+      "type": "integer",
+      "title": "The idShort schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        44
+      ]
+    },
+    "idAttachmentCover": {
+      "$id": "#/properties/idAttachmentCover",
+      "type": "null",
+      "title": "The idAttachmentCover schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "idLabels": {
+      "$id": "#/properties/idLabels",
+      "type": "array",
+      "title": "The idLabels schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/idLabels/items"
+      }
+    },
+    "manualCoverAttachment": {
+      "$id": "#/properties/manualCoverAttachment",
+      "type": "boolean",
+      "title": "The manualCoverAttachment schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The name schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Updated name"
+      ]
+    },
+    "pos": {
+      "$id": "#/properties/pos",
+      "type": "integer",
+      "title": "The pos schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        1376255
+      ]
+    },
+    "shortLink": {
+      "$id": "#/properties/shortLink",
+      "type": "string",
+      "title": "The shortLink schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "uVn0eLtl"
+      ]
+    },
+    "isTemplate": {
+      "$id": "#/properties/isTemplate",
+      "type": "boolean",
+      "title": "The isTemplate schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "dueComplete": {
+      "$id": "#/properties/dueComplete",
+      "type": "boolean",
+      "title": "The dueComplete schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "due": {
+      "$id": "#/properties/due",
+      "type": "null",
+      "title": "The due schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "labels": {
+      "$id": "#/properties/labels",
+      "type": "array",
+      "title": "The labels schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/labels/items"
+      }
+    },
+    "shortUrl": {
+      "$id": "#/properties/shortUrl",
+      "type": "string",
+      "title": "The shortUrl schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "https://trello.com/c/uVn0eLtl"
+      ]
+    },
+    "start": {
+      "$id": "#/properties/start",
+      "type": "null",
+      "title": "The start schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "url": {
+      "$id": "#/properties/url",
+      "type": "string",
+      "title": "The url schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "https://trello.com/c/uVn0eLtl/44-updated-name"
+      ]
+    },
+    "cover": {
+      "$id": "#/properties/cover",
+      "type": "object",
+      "title": "The cover schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "idAttachment": null,
+          
+          "idUploadedBackground": null,
+          "size": "normal",
+          "brightness": "light"
+        }
+      ],
+      "required": [
+        "idAttachment",
+        
+        "idUploadedBackground",
+        "size",
+        "brightness"
+      ],
+      "properties": {
+        "idAttachment": {
+          "$id": "#/properties/cover/properties/idAttachment",
+          "type": "null",
+          "title": "The idAttachment schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+       
+        "idUploadedBackground": {
+          "$id": "#/properties/cover/properties/idUploadedBackground",
+          "type": "null",
+          "title": "The idUploadedBackground schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "size": {
+          "$id": "#/properties/cover/properties/size",
+          "type": "string",
+          "title": "The size schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "normal"
+          ]
+        },
+        "brightness": {
+          "$id": "#/properties/cover/properties/brightness",
+          "type": "string",
+          "title": "The brightness schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "light"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "idMembers": {
+      "$id": "#/properties/idMembers",
+      "type": "array",
+      "title": "The idMembers schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/idMembers/items"
+      }
+    },
+    "email": {
+      "$id": "#/properties/email",
+      "type": "null",
+      "title": "The email schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "badges": {
+      "$id": "#/properties/badges",
+      "type": "object",
+      "title": "The badges schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "attachmentsByType": {
+            "trello": {
+              "board": 0,
+              "card": 0
+            }
+          },
+          "location": false,
+          "votes": 0,
+          "viewingMemberVoted": false,
+          "subscribed": false,
+          "fogbugz": "",
+          "checkItems": 0,
+          "checkItemsChecked": 0,
+          "checkItemsEarliestDue": null,
+          "comments": 0,
+          "attachments": 0,
+          "description": true,
+          "due": null,
+          "dueComplete": false,
+          "start": null
+        }
+      ],
+      "required": [
+        "attachmentsByType",
+        "location",
+        "votes",
+        "viewingMemberVoted",
+        "subscribed",
+        "fogbugz",
+        "checkItems",
+        "checkItemsChecked",
+        "checkItemsEarliestDue",
+        "comments",
+        "attachments",
+        "description",
+        "due",
+        "dueComplete",
+        "start"
+      ],
+      "properties": {
+        "attachmentsByType": {
+          "$id": "#/properties/badges/properties/attachmentsByType",
+          "type": "object",
+          "title": "The attachmentsByType schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "trello": {
+                "board": 0,
+                "card": 0
+              }
+            }
+          ],
+          "required": [
+            "trello"
+          ],
+          "properties": {
+            "trello": {
+              "$id": "#/properties/badges/properties/attachmentsByType/properties/trello",
+              "type": "object",
+              "title": "The trello schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "board": 0,
+                  "card": 0
+                }
+              ],
+              "required": [
+                "board",
+                "card"
+              ],
+              "properties": {
+                "board": {
+                  "$id": "#/properties/badges/properties/attachmentsByType/properties/trello/properties/board",
+                  "type": "integer",
+                  "title": "The board schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "card": {
+                  "$id": "#/properties/badges/properties/attachmentsByType/properties/trello/properties/card",
+                  "type": "integer",
+                  "title": "The card schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "additionalProperties": true
+        },
+        "location": {
+          "$id": "#/properties/badges/properties/location",
+          "type": "boolean",
+          "title": "The location schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "votes": {
+          "$id": "#/properties/badges/properties/votes",
+          "type": "integer",
+          "title": "The votes schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "viewingMemberVoted": {
+          "$id": "#/properties/badges/properties/viewingMemberVoted",
+          "type": "boolean",
+          "title": "The viewingMemberVoted schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "subscribed": {
+          "$id": "#/properties/badges/properties/subscribed",
+          "type": "boolean",
+          "title": "The subscribed schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "fogbugz": {
+          "$id": "#/properties/badges/properties/fogbugz",
+          "type": "string",
+          "title": "The fogbugz schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "checkItems": {
+          "$id": "#/properties/badges/properties/checkItems",
+          "type": "integer",
+          "title": "The checkItems schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "checkItemsChecked": {
+          "$id": "#/properties/badges/properties/checkItemsChecked",
+          "type": "integer",
+          "title": "The checkItemsChecked schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "checkItemsEarliestDue": {
+          "$id": "#/properties/badges/properties/checkItemsEarliestDue",
+          "type": "null",
+          "title": "The checkItemsEarliestDue schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "comments": {
+          "$id": "#/properties/badges/properties/comments",
+          "type": "integer",
+          "title": "The comments schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "attachments": {
+          "$id": "#/properties/badges/properties/attachments",
+          "type": "integer",
+          "title": "The attachments schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "description": {
+          "$id": "#/properties/badges/properties/description",
+          "type": "boolean",
+          "title": "The description schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "due": {
+          "$id": "#/properties/badges/properties/due",
+          "type": "null",
+          "title": "The due schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "dueComplete": {
+          "$id": "#/properties/badges/properties/dueComplete",
+          "type": "boolean",
+          "title": "The dueComplete schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "start": {
+          "$id": "#/properties/badges/properties/start",
+          "type": "null",
+          "title": "The start schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "subscribed": {
+      "$id": "#/properties/subscribed",
+      "type": "boolean",
+      "title": "The subscribed schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "idChecklists": {
+      "$id": "#/properties/idChecklists",
+      "type": "array",
+      "title": "The idChecklists schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/idChecklists/items"
+      }
+    }
+  },
+  "additionalProperties": true
+}
