@@ -33,5 +33,22 @@
 
             return value;
         }
+
+        /// <summary>
+        /// Maps values according to stored data from dictionary.
+        /// </summary>
+        /// <param name="values">Values to be mapped.</param>
+        /// <param name="storedData">Stored data.</param>
+        /// <returns>Dictionary Mapped value.</returns>
+        public static Dictionary<string, string> MapValues(Dictionary<string, string> values, Dictionary<string, string> storedData)
+        {
+            Dictionary<string, string> dictionaryMapped = new Dictionary<string, string>();
+            foreach (KeyValuePair<string, string> value in values)
+            {
+                dictionaryMapped[value.Key] = MapValue(value.Value, storedData);
+            }
+
+            return dictionaryMapped;
+        }
     }
 }

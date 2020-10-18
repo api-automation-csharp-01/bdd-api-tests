@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -25,10 +25,9 @@
     <None Include="Schemas\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\DeleteProject.feature.cs" />
-    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\GetProject.feature.cs" />
-    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\PostProject.feature.cs" />
-    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\PutProject.feature.cs" />
+  	<None Update="TestSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="allureConfig.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
