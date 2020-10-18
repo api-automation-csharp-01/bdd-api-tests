@@ -39,5 +39,4 @@
     <ProjectReference Include="..\APIAutomationCore\APIAutomationCore.csproj" />
   </ItemGroup>
 
-
 </Project>
