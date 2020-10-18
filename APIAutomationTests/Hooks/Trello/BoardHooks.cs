@@ -25,6 +25,7 @@
         /// Create board.
         /// </summary>
         [BeforeScenario(Order = 1)]
+        [Scope(Tag = "createBoard")]
         [Scope(Tag = "createTrelloBoard")]
         public void CreateBoard()
         {
@@ -41,10 +42,32 @@
         }
 
         /// <summary>
+        /// Create label.
+        /// </summary>
+        [BeforeScenario(Order = 1)]
+        [Scope(Tag = "createLabel")]
+        public void CreateLabel()
+        {
+            var request = new TrelloRequest(resource: "boards/{BOARD_ID}/labels");
+            var requestBody = @"{
+                ""name"":""myFirstTestLabel""
+            }";
+            request.GetRequest().AddJsonBody(requestBody);
+
+            // Send request
+            var response = RequestManager.Post(TrelloClient.GetInstance(), request);
+
+            // Parse response to json object
+            helper.StoreId(response.GetValue("id"));
+            helper.StoreData("LABEL_ID", response.GetValue("id"));
+        }
+
+        /// <summary>
         /// Delete board.
         /// </summary>
         [AfterScenario(Order = 100)]
         [Scope(Tag = "deleteTrelloBoard")]
+        [Scope(Tag = "deleteBoard")]
         public void DeleteBoard()
         {
             foreach (string id in helper.GetIds())
