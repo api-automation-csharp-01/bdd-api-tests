@@ -25,11 +25,9 @@
     <None Include="Schemas\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Pivotal\PostProject.feature.cs" />
     <None Include="allureConfig.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-
     <None Include="specflow.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -37,21 +35,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\APIAutomationCore\APIAutomationCore.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <SpecFlowFeatureFiles Update="Features\Salesforce\PostCampaign.feature">
-      <CodeBehindFile>Features/Examples/PostProject.feature.cs</CodeBehindFile>
-    </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Salesforce\PatchCampaign.feature">
-      <CodeBehindFile>Features/Examples/PostProject.feature.cs</CodeBehindFile>
-    </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Salesforce\GetCampaign.feature">
-      <CodeBehindFile>Features/Examples/PostProject.feature.cs</CodeBehindFile>
-    </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Salesforce\DeleteCampaign.feature">
-      <CodeBehindFile>Features/Examples/PostProject.feature.cs</CodeBehindFile>
-    </SpecFlowFeatureFiles>
   </ItemGroup>
 
 </Project>
