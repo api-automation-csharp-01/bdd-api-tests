@@ -29,6 +29,7 @@
     <None Include="allureConfig.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+
     <None Include="specflow.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -38,17 +39,5 @@
     <ProjectReference Include="..\APIAutomationCore\APIAutomationCore.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Features\Pivotal\PostEpics.feature.cs">
-      <DependentUpon>PostEpics.feature</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <SpecFlowFeatureFiles Update="Features\Pivotal\PostEpics.feature">
-      <Visible>$(UsingMicrosoftNETSdk)</Visible>
-      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
-    </SpecFlowFeatureFiles>
-  </ItemGroup>
 
 </Project>
