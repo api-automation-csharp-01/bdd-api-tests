@@ -1,4 +1,4 @@
-﻿@regression
+﻿@regression @skipScenario
 Feature: Delete new Project
 
 @functional @createTodoist

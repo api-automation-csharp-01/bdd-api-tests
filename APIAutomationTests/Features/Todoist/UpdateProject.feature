@@ -1,4 +1,4 @@
-﻿@regression
+﻿@regression @skipScenario
 Feature: Update Project
 
 Background: Create project

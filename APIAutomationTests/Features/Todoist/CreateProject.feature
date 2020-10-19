@@ -1,4 +1,4 @@
-﻿@regression
+﻿@regression @skipScenario
 Feature: Create Project
 
 @functional @createTodoist
