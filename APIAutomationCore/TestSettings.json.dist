@@ -9,7 +9,7 @@
     "baseUrl": "https://api.trello.com/1"
   },
   "todoist": {
-    "token": "71b3f656aeea06d742b6f441d3b170e4c886d371",
+    "token": "",
     "baseUrl": "https://api.todoist.com/rest/v1"
   },
   "salesforce": {
