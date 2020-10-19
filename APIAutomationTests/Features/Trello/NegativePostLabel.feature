@@ -1,6 +1,7 @@
-﻿Feature: Negative test to create labels
+﻿@regression
+Feature: Negative test to create labels
 
-@createBoard
+@negative  @createBoard @deleteBoard
 Scenario: It is not possible to create a label with color value equal to numbers.
 	Given I use the "Trello" service client
 	When I send a "Trello" POST request to "boards/{BOARD_ID}/labels" with the following json body
@@ -11,7 +12,12 @@ Scenario: It is not possible to create a label with color value equal to numbers
 		}
 		"""
 	Then I validate that the response status code is "400"
-@createBoard
+	And I validate that the response body contains the following values
+		| jsonpath | expectedValue           |
+		| message  | invalid value for color |
+		| error    | ERROR                   |		
+		
+@negative @createBoard @deleteBoard
 Scenario: It is not possible to create a label with color value equal to empty spaces.
 	Given I use the "Trello" service client
 	When I send a "Trello" POST request to "boards/{BOARD_ID}/labels" with the following json body
@@ -22,8 +28,12 @@ Scenario: It is not possible to create a label with color value equal to empty s
 		}
 		"""
 	Then I validate that the response status code is "400"
+	And I validate that the response body contains the following values
+		| jsonpath | expectedValue           |
+		| message  | invalid value for color |
+		| error    | ERROR                   |	
 
-@createBoard
+@negative @createBoard @deleteBoard
 Scenario: It is not possible to create a label with color value equal to special characters.
 	Given I use the "Trello" service client
 	When I send a "Trello" POST request to "boards/{BOARD_ID}/labels" with the following json body
@@ -34,8 +44,12 @@ Scenario: It is not possible to create a label with color value equal to special
 		}
 		"""
 	Then I validate that the response status code is "400"
+	And I validate that the response body contains the following values
+		| jsonpath | expectedValue           |
+		| message  | invalid value for color |
+		| error    | ERROR                   |	
 
-@createBoard
+@negative @createBoard @deleteBoard
 Scenario: It is not possible to create a label with color value equal to uppercase.
 	Given I use the "Trello" service client
 	When I send a "Trello" POST request to "boards/{BOARD_ID}/labels" with the following json body
@@ -46,4 +60,8 @@ Scenario: It is not possible to create a label with color value equal to upperca
 		}
 		"""
 	Then I validate that the response status code is "400"
+	And I validate that the response body contains the following values
+		| jsonpath | expectedValue           |
+		| message  | invalid value for color |
+		| error    | ERROR                   |
 	

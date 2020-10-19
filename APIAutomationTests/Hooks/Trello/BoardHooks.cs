@@ -5,7 +5,7 @@
     using TechTalk.SpecFlow;
 
     /// <summary>
-    /// Defines boards hooks class.
+    /// This class have the common hook for trello.
     /// </summary>
     [Binding]
     public class BoardHooks
@@ -14,6 +14,7 @@
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BoardHooks"/> class.
+        ///  Initializes a new instance for BoardHooks class.
         /// </summary>
         /// <param name="helper">Helper class.</param>
         public BoardHooks(Helper helper)
@@ -26,31 +27,11 @@
         /// </summary>
         [BeforeScenario(Order = 1)]
         [Scope(Tag = "createBoard")]
-        [Scope(Tag = "createTrelloBoard")]
         public void CreateBoard()
         {
             var request = new TrelloRequest(resource: "boards");
-            var requestBody = $"{{\"name\": \"Board created\"}}";
-            request.GetRequest().AddJsonBody(requestBody);
-
-            // Send Request
-            var response = RequestManager.Post(TrelloClient.GetInstance(), request);
-
-            // Parse response to json object
-            helper.StoreId(response.GetValue("id"));
-            helper.StoreData("BOARD_ID", response.GetValue("id"));
-        }
-
-        /// <summary>
-        /// Create label.
-        /// </summary>
-        [BeforeScenario(Order = 1)]
-        [Scope(Tag = "createLabel")]
-        public void CreateLabel()
-        {
-            var request = new TrelloRequest(resource: "boards/{BOARD_ID}/labels");
             var requestBody = @"{
-                ""name"":""myFirstTestLabel""
+                ""name"":""Trello Label API automation""
             }";
             request.GetRequest().AddJsonBody(requestBody);
 
@@ -59,20 +40,19 @@
 
             // Parse response to json object
             helper.StoreId(response.GetValue("id"));
-            helper.StoreData("LABEL_ID", response.GetValue("id"));
+            helper.StoreData("BOARD_ID", response.GetValue("id"));
         }
 
         /// <summary>
-        /// Delete board.
+        /// Delete a board.
         /// </summary>
-        [AfterScenario(Order = 100)]
-        [Scope(Tag = "deleteTrelloBoard")]
+        [AfterScenario(Order = 101)]
         [Scope(Tag = "deleteBoard")]
         public void DeleteBoard()
         {
             foreach (string id in helper.GetIds())
             {
-                var request = new TrelloRequest(resource: "boards/" + id);
+                var request = new TrelloRequest("boards/" + id);
                 RequestManager.Delete(TrelloClient.GetInstance(), request);
             }
         }
